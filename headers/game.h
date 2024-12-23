@@ -21,6 +21,8 @@ class Game {
     
     int xDim, yDim;
 
+    char dead, alive;
+
     std::vector<std::vector<bool>> gameState;
     std::vector<std::vector<bool>> gameStateOld;
 
@@ -34,6 +36,9 @@ class Game {
         gameStateOld = gameState;   // Initialize the gameState backup
 
         notStable = true;
+
+        dead = '+';
+        alive = 'O';
     }
 
     int numOfNeighbours(int x, int y) {
